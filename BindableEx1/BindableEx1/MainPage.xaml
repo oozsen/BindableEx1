@@ -15,9 +15,9 @@
                     <TextCell Text="Name" Detail="Ozgur Ozsen"/>
                     <EntryCell Label="Title" Placeholder="(eg working)"/>
                     <SwitchCell Text="Notifications" On="True"/>
-                    <datecellns:DateCell />
-                    <datecellns:DateCell />
-                    <datecellns:DateCell />
+                    <datecellns:DateCell Label="Starts"/>
+                    <datecellns:DateCell Label="Runs"/>
+                    <datecellns:DateCell Label="Ends"/>
                 </TableSection>
             </TableRoot>
         </TableView>
