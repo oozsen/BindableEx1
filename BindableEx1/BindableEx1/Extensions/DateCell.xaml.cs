@@ -12,9 +12,20 @@ namespace BindableEx1.Extensions
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DateCell : ViewCell
 	{
-        public string Label { get; set; }
+        public static readonly BindableProperty LabelProperty =
+            BindableProperty.Create(
+                "Label",
+                typeof(string),
+                typeof(DateCell));
 
-		public DateCell ()
+        //public string Label { get; set; }
+        public string Label
+        {
+            get { return (string)GetValue(LabelProperty); }
+            set { SetValue(LabelProperty, value); }
+        }
+
+        public DateCell ()
 		{
 			InitializeComponent ();
 
