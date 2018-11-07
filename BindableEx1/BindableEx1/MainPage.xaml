@@ -2,13 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BindableEx1"
+             xmlns:datecellns="clr-namespace:BindableEx1.Extensions"
              x:Class="BindableEx1.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
     	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           HorizontalOptions="Center"/>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Basics">
+                    <TextCell Text="Name" Detail="Ozgur Ozsen"/>
+                    <EntryCell Label="Title" Placeholder="(eg working)"/>
+                    <SwitchCell Text="Notifications" On="True"/>
+                    <datecellns:DateCell />
+                    <datecellns:DateCell />
+                    <datecellns:DateCell />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
     </StackLayout>
 
 </ContentPage>
