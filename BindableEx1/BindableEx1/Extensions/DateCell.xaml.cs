@@ -12,9 +12,13 @@ namespace BindableEx1.Extensions
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DateCell : ViewCell
 	{
+        public string Label { get; set; }
+
 		public DateCell ()
 		{
 			InitializeComponent ();
+
+            BindingContext = this;
 		}
 	}
 }
